@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Where(ther) are you?</title>
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap">
+    <!-- Use Google Fonts API to use Roboto Condensed font -->
+</head>
+
+<body>
+    <div id="navigationBar">
+        <ul>
+            <li><button id="currentLocationButton">Your Current Location</button></li>
+            <li><img id="AU" src="landmarks/default/AU.svg" alt="Sydney Icon"></li>
+            <li><img id="CH" src="landmarks/default/CH.svg" alt="Beijing Icon"></li>
+            <li><img id="FR" src="landmarks/default/FR.svg" alt="Paris Icon"></li>
+            <li><img id="MY" src="landmarks/default/MY.svg" alt="Kuala Lumpur Icon"></li>
+            <li><img id="SG" src="landmarks/default/SG.svg" alt="Singapore Icon"></li>
+            <li><img id="UK" src="landmarks/default/UK.svg" alt="London Icon"></li>
+        </ul>
+    </div>
+    <div class="locationContent">
+        <div class="outer">
+            <div class="inner" id="locationData">
+                <!-- used to show the current, real-time location data includes: location, time, date, weather and sunrise & sunset times -->
+                <div id="location"><p>Location</p></div>
+                <div id="temperatureValue"><p>tvalue</p></div>
+                <div id="temperatureDescText">tdesctext</div>
+                <div id="dateTime"><p>DATE</p></div>
+                <div id="sunriseTime"><p>sunr</p></div>
+                <div id="sunsetTime"><p>suns</p></div>
+                <div><button id="tempButton">Change to °F</button><button id="timeButton">Change to AM/PM</button><button id="dateButton">Change to MM/DD/YYYY</button></div>
+            </div>
+            <div class="inner" id="requireLocationService">
+                <h2>Wea(ther) are you? requires access to your location services to show your current weather data.</h2>
+                <button id="find-me">Give Location Access</button><br/>
+                <p>Current Location Service: <span id="serviceStatus">Disabled</span></p>
+                <p id="locationStatus"></p>
+                <button id="hideLocationService">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
