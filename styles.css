@@ -238,3 +238,31 @@ button {
     list-style-type: none;
     padding: 0;
 }
+
+#deviceSize {
+    display: none;
+}
+
+#deviceSize div {
+    text-align: center; 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
+
+/* media query that accounts for browser width when elements start to overlay on top of each other, hides all the elements and displays notice that webapge doesn't work on particular browser size */
+@media (max-width: 1156px) { 
+    #deviceSize {
+        display: block;
+    }
+    #navigationBar {
+        display: none;
+    }
+    #locationData {
+        display: none;
+    }
+    #requireLocationService {
+        display: none;
+    }
+}
